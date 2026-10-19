@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Khaled & Nour — Wedding Invitation</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f4f8f1;--card:#ffffffb8;--ink:#2c3a2e;--mute:#6b7d6d;--accent:#5f8a64;--line:#cfdcca;--leaf:#8fb08f;
+color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#141b15;--card:#1f2a21b8;--ink:#e8efe6;--mute:#9bb09d;--accent:#8fc196;--line:#2f3f32;--leaf:#4d6b52;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#141b15;--card:#1f2a21b8;--ink:#e8efe6;--mute:#9bb09d;--accent:#8fc196;--line:#2f3f32;--leaf:#4d6b52;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*:before,*:after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Cormorant Garamond',Georgia,serif;font-size:19px;line-height:1.5;text-align:center;overflow-x:hidden}
+[dir=rtl] body,body[dir=rtl]{font-family:'Amiri','Noto Naskh Arabic',serif}
+.leaf{position:fixed;width:180px;opacity:.5;pointer-events:none;z-index:0;fill:var(--leaf)}
+.l1{top:-30px;inset-inline-start:-40px;transform:rotate(-20deg)}.l2{bottom:-40px;inset-inline-end:-40px;transform:rotate(150deg)}
+#cover{position:fixed;inset:0;z-index:20;background:var(--bg);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;transition:transform .9s cubic-bezier(.7,0,.2,1),opacity .9s;padding:24px}
+#cover.gone{transform:translateY(-100%);opacity:0;pointer-events:none}
+.names{font-size:clamp(44px,13vw,84px);line-height:1.05;margin:0;font-weight:600}
+.amp{color:var(--accent);font-style:italic;display:block;font-size:.55em}
+.small{letter-spacing:.3em;text-transform:uppercase;font-size:13px;color:var(--mute)}
+[dir=rtl] .small{letter-spacing:0;font-size:16px}
+.orn{color:var(--accent);font-size:26px}
+button,.btn{font:inherit;cursor:pointer;border:1px solid var(--accent);background:transparent;color:var(--accent);padding:10px 30px;border-radius:999px;text-decoration:none;display:inline-block;transition:.25s}
+button:hover,.btn:hover,.btn.fill{background:var(--accent);color:var(--bg)}
+.top{position:fixed;top:calc(10px + env(safe-area-inset-top,0px));inset-inline-end:12px;z-index:30;display:flex;gap:8px}
+.top button{padding:4px 14px;font-size:15px;background:var(--card);backdrop-filter:blur(8px)}
+main{position:relative;z-index:1;max-width:560px;margin:0 auto;padding:70px 20px 40px}
+section{background:var(--card);backdrop-filter:blur(10px);border:1px solid var(--line);border-radius:22px;padding:34px 22px;margin:0 0 22px;opacity:0;transform:translateY(24px);transition:.8s}
+section.in{opacity:1;transform:none}
+h2{margin:0 0 14px;font-size:15px;letter-spacing:.3em;text-transform:uppercase;color:var(--accent);font-weight:600}
+[dir=rtl] h2{letter-spacing:0;font-size:22px}
+h3{margin:4px 0;font-size:34px;font-weight:600}
+.date{display:flex;justify-content:center;align-items:center;gap:18px;margin:16px 0}
+.date b{font-size:76px;line-height:1;color:var(--accent);font-weight:600}
+.date div{text-align:start;font-size:18px;color:var(--mute)}
+.cd{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.cd div{border:1px solid var(--line);border-radius:14px;padding:12px 4px}.cd b{display:block;font-size:34px;color:var(--accent)}.cd span{font-size:13px;color:var(--mute)}
+.gal{direction:ltr;position:relative;height:330px;margin:0 -22px;overflow:hidden;touch-action:pan-y;cursor:grab;user-select:none;background:radial-gradient(ellipse at 50% 55%,var(--line),transparent 68%)}
+.gal:after{content:"";position:absolute;left:12%;right:12%;top:50%;height:110px;transform:translateY(-20%);border:1px dashed var(--accent);border-radius:50%;opacity:.35;pointer-events:none}
+.card{position:absolute;left:50%;top:50%;width:150px;padding:8px 8px 0;background:#fffdf8;border-radius:3px;box-shadow:0 10px 24px #0004,0 2px 4px #0003;will-change:transform}
+.card:before{content:"";position:absolute;top:-9px;left:50%;width:54px;height:17px;margin-left:-27px;background:#cfe0c4cc;transform:rotate(-4deg);z-index:1}
+.ph{height:150px;background:linear-gradient(135deg,var(--line),var(--leaf));display:flex;align-items:center;justify-content:center;color:#fff;font-size:34px;overflow:hidden}.ph:empty:after{content:"♡"}
+.cap{display:block;padding:7px 0 9px;font-size:17px;font-style:italic;color:#5a6b5c}
+.gal img{pointer-events:none}
+.gal img{width:100%;height:100%;object-fit:cover;display:block}
+.tl{list-style:none;padding:0;margin:0;text-align:start;border-inline-start:2px solid var(--line);margin-inline-start:14px}
+.tl li{position:relative;padding:0 0 18px 0;padding-inline-start:22px}
+.tl li:before{content:"";position:absolute;inset-inline-start:-7px;top:9px;width:12px;height:12px;border-radius:50%;background:var(--accent)}
+.tl b{color:var(--accent);margin-inline-end:8px}
+.row{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:14px}
+#lb{position:fixed;inset:0;background:#000d;z-index:40;display:none;align-items:center;justify-content:center}
+#lb.on{display:flex}#lb img{max-width:92%;max-height:80%;border-radius:10px}
+#lb button{position:absolute;color:#fff;border-color:#fff8;padding:8px 16px}
+footer{color:var(--mute);font-size:15px;padding:10px 0 30px;position:relative;z-index:1}
+footer b{letter-spacing:.3em;color:var(--accent)}
+footer a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: var(--accent);
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<svg class="leaf l1" viewBox="0 0 100 100"><path d="M10 90C10 40 40 10 90 10 90 60 60 90 10 90Z"/></svg>
+<svg class="leaf l2" viewBox="0 0 100 100"><path d="M10 90C10 40 40 10 90 10 90 60 60 90 10 90Z"/></svg>
+<div class="top"><button id="lang">العربية</button><button id="theme" aria-label="Theme">◐</button></div>
+
+<div id="cover">
+  <div class="small" data-t="invites"></div>
+  <h1 class="names"><span data-t="n1"></span><span class="amp">&</span><span data-t="n2"></span></h1>
+  <div class="orn">❦</div>
+  <button id="open" data-t="open"></button>
+</div>
+
+<main>
+  <section>
+    <h2 data-t="ceremony"></h2>
+    <p data-t="announce"></p>
+    <h3 data-t="n1"></h3><div class="orn">&</div><h3 data-t="n2"></h3>
+    <div class="date"><b>21</b><div><span data-t="day"></span><br><span data-t="month"></span><br>2026</div></div>
+    <p><span data-t="at"></span> <b>07:30</b><br><span data-t="venue"></span></p>
+    <div class="row">
+      <a class="btn fill" id="cal" target="_blank" rel="noopener" data-t="addcal"></a>
+      <a class="btn" id="map" target="_blank" rel="noopener" data-t="directions"></a>
+    </div>
+  </section>
+
+  <section>
+    <h2 data-t="countdown"></h2>
+    <div class="cd"><div><b id="d">0</b><span data-t="days"></span></div><div><b id="h">0</b><span data-t="hours"></span></div><div><b id="m">0</b><span data-t="mins"></span></div><div><b id="s">0</b><span data-t="secs"></span></div></div>
+  </section>
+
+  <section>
+    <h2 data-t="gallery"></h2>
+    <div class="gal" id="gal"></div>
+    <p class="small" data-t="hint" style="margin:12px 0 0"></p>
+  </section>
+
+  <section>
+    <h2 data-t="dress"></h2>
+    <h3 data-t="dresstxt"></h3>
+  </section>
+
+  <section>
+    <h2 data-t="schedule"></h2>
+    <ul class="tl">
+      <li><b>5:00</b><span data-t="s1"></span></li>
+      <li><b>7:30</b><span data-t="s2"></span></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2 data-t="rsvp"></h2>
+    <p data-t="rsvptxt"></p>
+    <div class="row"><a class="btn fill" id="wa" target="_blank" rel="noopener" data-t="yes"></a><a class="btn" id="wa2" target="_blank" rel="noopener" data-t="no"></a></div>
+  </section>
+
+  <p data-t="thanks"></p>
+</main>
+
+<footer>
+  Designed by
+  <a href="https://www.linkedin.com/in/yousseif-saif"
+     target="_blank"
+     rel="noopener noreferrer">
+    <b>Yousseif Saif</b>
+  </a>
+</footer>
+
+<div id="lb"><button id="x" style="top:20px;inset-inline-end:20px">✕</button><button id="pv" style="inset-inline-start:12px">‹</button><img id="lbi" alt=""><button id="nx" style="inset-inline-end:12px">›</button></div>
+
+<script>
+// ✏️ Edit these
+var CFG={
+  whatsapp:"",            // e.g. "201001234567" (international format, no +)
+  mapUrl:"https://www.google.com/maps/search/?api=1&query=",  // paste the real venue link here
+  photos:["1.jpg","2.jpg","3.jpg","4.jpg"]    // add image URLs/data URIs (host them on your own domain)
+};
+var T={
+ en:{invites:"Cordially invites you",n1:"Khaled",n2:"Nour",open:"Open Invitation",ceremony:"Ceremony Info",announce:"We joyfully announce the wedding of our children",day:"Saturday",month:"November",at:"Wedding ceremony at",venue:"Lavista",addcal:"Add to Calendar",directions:"Directions",countdown:"Counting Down",days:"Days",hours:"Hours",mins:"Min",secs:"Sec",gallery:"Photo Gallery",dress:"Dress Code",dresstxt:"Party Attire",schedule:"Wedding Day Schedule",s1:"Wedding Ceremony",s2:"Welcome Reception",rsvp:"RSVP",rsvptxt:"Kindly let us know if you can join us",yes:"I’ll be there",no:"Can’t make it",thanks:"Your presence would be the greatest gift we could receive!",lang:"العربية",hint:"Drag to spin · tap a photo",cap1:"Our story",cap2:"Together",cap3:"Forever",cap4:"Yes ♡"},
+ ar:{invites:"يتشرفان بدعوتكم",n1:"خالد",n2:"نور",open:"افتح الدعوة",ceremony:"تفاصيل الحفل",announce:"يسعدنا أن نعلن زفاف أبنائنا",day:"السبت",month:"نوفمبر",at:"حفل الزفاف الساعة",venue:"لافيستا ",addcal:"أضف إلى التقويم",directions:"الاتجاهات",countdown:"العد التنازلي",days:"يوم",hours:"ساعة",mins:"دقيقة",secs:"ثانية",gallery:"معرض الصور",dress:"الزي",dresstxt:"ملابس رسمية للحفلات",schedule:"جدول يوم الزفاف",s1:"عقد القران والزفاف",s2:"حفل الاستقبال",rsvp:"تأكيد الحضور",rsvptxt:"من فضلكم أخبرونا إن كنتم ستشاركوننا فرحتنا",yes:"سأحضر",no:"لا أستطيع الحضور",thanks:"حضوركم هو أعظم هدية لنا!",lang:"English",hint:"اسحب للدوران · اضغط على الصورة",cap1:"حكايتنا",cap2:"معًا",cap3:"للأبد",cap4:"نعم ♡"}
+};
+var L="en",$=function(i){return document.getElementById(i)},target=new Date("2026-11-21T09:00:00");
+function render(){
+  var d=T[L];document.documentElement.lang=L;document.documentElement.dir=L=="ar"?"rtl":"ltr";
+  document.querySelectorAll("[data-t]").forEach(function(e){e.textContent=d[e.dataset.t]});
+  $("lang").textContent=d.lang;
+  var title="Khaled & Nour";
+  $("cal").href="https://calendar.google.com/calendar/render?action=TEMPLATE&text="+encodeURIComponent(title+" Wedding")+"&dates=20261121T090000/20261121T120000&details="+encodeURIComponent(d.thanks);
+  $("map").href=CFG.mapUrl+encodeURIComponent("Family Home");
+  var w="https://wa.me/"+CFG.whatsapp+"?text=";
+  $("wa").href=w+encodeURIComponent(L=="ar"?"سأحضر الزفاف إن شاء الله 🌿":"I’ll be at the wedding 🌿");
+  $("wa2").href=w+encodeURIComponent(L=="ar"?"أعتذر، لن أتمكن من الحضور":"Sorry, I can’t make it");
+}
+$("lang").onclick=function(){L=L=="en"?"ar":"en";render()};
+$("theme").onclick=function(){var r=document.documentElement,dark=getComputedStyle(r).colorScheme=="dark";r.dataset.theme=dark?"light":"dark"};
+$("open").onclick=function(){$("cover").classList.add("gone");setTimeout(reveal,400)};
+function reveal(){var o=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");o.unobserve(e.target)}})},{threshold:.15});document.querySelectorAll("section").forEach(function(s){o.observe(s)})}
+function tick(){var t=Math.max(0,target-new Date()),p=function(n){return Math.floor(n)};
+  $("d").textContent=p(t/864e5);$("h").textContent=p(t/36e5%24);$("m").textContent=p(t/6e4%60);$("s").textContent=p(t/1e3%60)}
+setInterval(tick,1000);tick();
+var cur=0,g=$("gal"),N=8,cards=[],base=0,vel=0,drag=null,moved=0,last=performance.now(),RM=matchMedia("(prefers-reduced-motion:reduce)").matches;
+for(var k=0;k<N;k++)(function(k){var i=k%CFG.photos.length,src=CFG.photos[i],c=document.createElement("div");c.className="card";var p=document.createElement("div");p.className="ph";if(src){var im=document.createElement("img");im.src=src;im.alt="";p.appendChild(im)}var cp=document.createElement("span");cp.className="cap";cp.dataset.t="cap"+(i+1);c.appendChild(p);c.appendChild(cp);c.dataset.i=i;g.appendChild(c);cards.push({el:c,tilt:(k%2?3:-3)+(k%3)})})(k);
+function spin(t){var dt=Math.min(50,t-last);last=t;if(!drag){base+=(RM?0:.00022*dt)+vel;vel*=.94}
+ var RX=Math.min(g.clientWidth*.36,200);
+ cards.forEach(function(c,k){var th=base+k*6.2832/N,z=(Math.cos(th)+1)/2;c.el.style.transform="translate(-50%,-50%) translate("+Math.sin(th)*RX+"px,"+(-(1-z)*36)+"px) scale("+(.58+.42*z)+") rotate("+c.tilt+"deg)";c.el.style.opacity=.35+.65*z;c.el.style.zIndex=1+Math.round(z*100);c.el.style.filter="blur("+((1-z)*1.6).toFixed(2)+"px)"});
+ requestAnimationFrame(spin)}
+requestAnimationFrame(spin);
+g.addEventListener("pointerdown",function(e){drag={x:e.clientX,t:e.target.closest(".card")};moved=0;vel=0});
+g.addEventListener("pointermove",function(e){if(!drag)return;var dx=e.clientX-drag.x;drag.x=e.clientX;moved+=Math.abs(dx);base+=dx*.008;vel=dx*.0008});
+g.addEventListener("pointerup",function(){if(drag&&moved<6&&drag.t)show(+drag.t.dataset.i);drag=null});
+g.addEventListener("pointercancel",function(){drag=null});
+
+function show(i){cur=(i+CFG.photos.length)%CFG.photos.length;var s=CFG.photos[cur];if(!s)return;$("lbi").src=s;$("lb").classList.add("on")}
+$("x").onclick=function(){$("lb").classList.remove("on")};$("pv").onclick=function(){show(cur-1)};$("nx").onclick=function(){show(cur+1)};
+render();
+</script>
+</body>
+</html>
